@@ -20,7 +20,7 @@ When the container stops, these file systems will be umounted.
 
 systemd is expected to be able to run within the container without requiring
 the `--privileged` option.  However you will still need to specify a special `--stop-signal`.  Standard docker containers sends SIGTERM to pid 1, but systemd
-does not shut down properly when it recieves a SIGTERM.  systemd specified that it needs to recieve a RTMIN+3 signal to shutdown properly.
+  does not shut down properly when it recieves a SIGTERM.  systemd specified that it needs to receive a RTMIN+3 signal to shutdown properly.
 
 If you created a container image based on a dockerfile like the following:
 ```
